@@ -126,7 +126,7 @@
             }
 
             var today = location.href.replace(/_u.date01=\d{8,}/, "_u.date01=" + getNowYMD());
-            $("html.ga > body").prepend("<div class='google-analytics-support'><a id='execute' href='" + today + "'>to today</a></div>");
+            $("body.gafe").prepend("<div class='google-analytics-support'><a id='execute' href='" + today + "'>to today</a></div>");
         });
 
 
