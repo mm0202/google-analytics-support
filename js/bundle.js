@@ -37,7 +37,6 @@
         return module.exports;
         /******/
     }
-
     /******/
     /******/
     /******/ 	// expose the modules object (__webpack_modules__)
@@ -106,7 +105,7 @@
         "use strict";
 
         Object.defineProperty(exports, "__esModule", {value: true});
-        var $ = __webpack_require__(2);
+        var $ = __webpack_require__(1);
         $(function () {
             function getNowYMD() {
                 var dt = new Date();
@@ -116,16 +115,14 @@
                 var result = y + m + d;
                 return result;
             }
-
             var today = location.href.replace(/_u.date01=\d{8,}/, "_u.date01=" + getNowYMD());
-            $("body").prepend("<a id='execute' href='" + today + "'>to today</a>");
+            $("body").first().prepend("<a id='execute' href='" + today + "'>to today</a>");
         });
 
 
         /***/
     }),
-    /* 1 */,
-    /* 2 */
+    /* 1 */
     /***/ (function (module, exports, __webpack_require__) {
 
         var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;
@@ -251,10 +248,10 @@
                     class2type[toString.call(obj)] || "object" :
                     typeof obj;
             }
-
             /* global Symbol */
 // Defining this global in .eslintrc.json would create a danger of using the global
 // unguarded in another place, it seems safer to define global only for this module
+
 
 
             var
@@ -626,7 +623,6 @@
                 return type === "array" || length === 0 ||
                     typeof length === "number" && length > 0 && (length - 1) in obj;
             }
-
             var Sizzle =
                 /*!
  * Sizzle CSS Selector Engine v2.3.3
@@ -995,7 +991,6 @@
                             }
                             return (cache[key + " "] = value);
                         }
-
                         return cache;
                     }
 
@@ -2263,7 +2258,6 @@
 // Easy API for creating new setFilters
                     function setFilters() {
                     }
-
                     setFilters.prototype = Expr.filters = Expr.pseudos;
                     Expr.setFilters = new setFilters();
 
@@ -2891,6 +2885,7 @@
                 })(window);
 
 
+
             jQuery.find = Sizzle;
             jQuery.expr = Sizzle.selectors;
 
@@ -2941,6 +2936,7 @@
 
             };
             var rsingleTag = (/^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i);
+
 
 
 // Implement the identical functionality for filter and not
@@ -3323,6 +3319,7 @@
                 };
             });
             var rnothtmlwhite = (/[^\x20\t\r\n\f]+/g);
+
 
 
 // Convert String-formatted options into Object-formatted ones
@@ -4285,6 +4282,7 @@
             var dataUser = new Data();
 
 
+
 //	Implementation Summary
 //
 //	1. Enforce API surface and semantic compatibility with 1.9.x branch
@@ -4801,6 +4799,7 @@
             var rscriptType = (/^$|^module$|\/(?:java|ecma)script/i);
 
 
+
 // We have to close these tags to support XHTML (#13200)
             var wrapMap = {
 
@@ -4981,6 +4980,7 @@
                 support.noCloneChecked = !!div.cloneNode(true).lastChild.defaultValue;
             })();
             var documentElement = document.documentElement;
+
 
 
             var
@@ -6809,7 +6809,6 @@
             function Tween(elem, options, prop, end, easing) {
                 return new Tween.prototype.init(elem, options, prop, end, easing);
             }
-
             jQuery.Tween = Tween;
 
             Tween.prototype = {
@@ -7767,6 +7766,8 @@
             });
 
 
+
+
             var rfocusable = /^(?:input|select|textarea|button)$/i,
                 rclickable = /^(?:a|area)$/i;
 
@@ -7899,6 +7900,8 @@
             ], function () {
                 jQuery.propFix[this.toLowerCase()] = this;
             });
+
+
 
 
             // Strip and collapse whitespace according to HTML spec
@@ -8084,6 +8087,8 @@
             });
 
 
+
+
             var rreturn = /\r/g;
 
             jQuery.fn.extend({
@@ -8261,6 +8266,8 @@
                     };
                 }
             });
+
+
 
 
 // Return jQuery for attributes-only inclusion
@@ -8500,6 +8507,7 @@
             var nonce = Date.now();
 
             var rquery = (/\?/);
+
 
 
 // Cross-browser xml parsing
@@ -9654,6 +9662,7 @@
                                                 complete(0, "error");
                                             } else {
                                                 complete(
+
                                                     // File: protocol always yields status 0; see #8605, #14207
                                                     xhr.status,
                                                     xhr.statusText
@@ -9732,6 +9741,8 @@
             });
 
 
+
+
 // Prevent auto-execution of scripts when no explicit dataType was provided (See gh-2432)
             jQuery.ajaxPrefilter(function (s) {
                 if (s.crossDomain) {
@@ -9799,6 +9810,8 @@
                     };
                 }
             });
+
+
 
 
             var oldCallbacks = [],
@@ -9892,6 +9905,8 @@
                     return "script";
                 }
             });
+
+
 
 
 // Support: Safari 8 only
