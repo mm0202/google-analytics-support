@@ -37,6 +37,7 @@
         return module.exports;
         /******/
     }
+
     /******/
     /******/
     /******/ 	// expose the modules object (__webpack_modules__)
@@ -107,6 +108,14 @@
         Object.defineProperty(exports, "__esModule", {value: true});
         var $ = __webpack_require__(1);
         $(function () {
+            var tags = document.createDocumentFragment();
+            var link = document.createElement('link');
+            link.rel = 'stylesheet';
+            // link.href = "http://develop:10091/mdist/styles/main.css";
+            link.href = "https://rawgithub.com/mm0202/google-analytics-support/master/styles/main.css";
+            tags.appendChild(link);
+            document.getElementsByTagName('head')[0].appendChild(tags);
+
             function getNowYMD() {
                 var dt = new Date();
                 var y = dt.getFullYear();
@@ -115,8 +124,9 @@
                 var result = y + m + d;
                 return result;
             }
+
             var today = location.href.replace(/_u.date01=\d{8,}/, "_u.date01=" + getNowYMD());
-            $("body").first().prepend("<a id='execute' href='" + today + "'>to today</a>");
+            $("body").prepend("<div class='google-analytics-support'><a id='execute' href='" + today + "'>to today</a></div>");
         });
 
 
@@ -248,10 +258,10 @@
                     class2type[toString.call(obj)] || "object" :
                     typeof obj;
             }
+
             /* global Symbol */
 // Defining this global in .eslintrc.json would create a danger of using the global
 // unguarded in another place, it seems safer to define global only for this module
-
 
 
             var
@@ -623,6 +633,7 @@
                 return type === "array" || length === 0 ||
                     typeof length === "number" && length > 0 && (length - 1) in obj;
             }
+
             var Sizzle =
                 /*!
  * Sizzle CSS Selector Engine v2.3.3
@@ -991,6 +1002,7 @@
                             }
                             return (cache[key + " "] = value);
                         }
+
                         return cache;
                     }
 
@@ -2258,6 +2270,7 @@
 // Easy API for creating new setFilters
                     function setFilters() {
                     }
+
                     setFilters.prototype = Expr.filters = Expr.pseudos;
                     Expr.setFilters = new setFilters();
 
@@ -2883,7 +2896,6 @@
                     return Sizzle;
 
                 })(window);
-
 
 
             jQuery.find = Sizzle;
@@ -3960,6 +3972,8 @@
             };
 
 
+
+
 // The deferred used on DOM ready
             var readyList = jQuery.Deferred();
 
@@ -4035,6 +4049,8 @@
                 // A fallback to window.onload, that will always work
                 window.addEventListener("load", completed);
             }
+
+
 
 
 // Multifunctional method to get and set values of a collection
@@ -4980,7 +4996,6 @@
                 support.noCloneChecked = !!div.cloneNode(true).lastChild.defaultValue;
             })();
             var documentElement = document.documentElement;
-
 
 
             var
@@ -6809,6 +6824,7 @@
             function Tween(elem, options, prop, end, easing) {
                 return new Tween.prototype.init(elem, options, prop, end, easing);
             }
+
             jQuery.Tween = Tween;
 
             Tween.prototype = {
@@ -7766,8 +7782,6 @@
             });
 
 
-
-
             var rfocusable = /^(?:input|select|textarea|button)$/i,
                 rclickable = /^(?:a|area)$/i;
 
@@ -7900,8 +7914,6 @@
             ], function () {
                 jQuery.propFix[this.toLowerCase()] = this;
             });
-
-
 
 
             // Strip and collapse whitespace according to HTML spec
@@ -8085,8 +8097,6 @@
                     return false;
                 }
             });
-
-
 
 
             var rreturn = /\r/g;
@@ -9662,7 +9672,6 @@
                                                 complete(0, "error");
                                             } else {
                                                 complete(
-
                                                     // File: protocol always yields status 0; see #8605, #14207
                                                     xhr.status,
                                                     xhr.statusText
@@ -9810,8 +9819,6 @@
                     };
                 }
             });
-
-
 
 
             var oldCallbacks = [],
@@ -10034,6 +10041,8 @@
 
                 return this;
             };
+
+
 
 
 // Attach a bunch of functions for handling common AJAX events
@@ -10420,6 +10429,8 @@
                     // subtraction forces infinities to NaN
                     !isNaN(obj - parseFloat(obj));
             };
+
+
 
 
 // Register as a named AMD module, since jQuery can be concatenated with other
