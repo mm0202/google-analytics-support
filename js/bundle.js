@@ -111,8 +111,9 @@
             var tags = document.createDocumentFragment();
             var link = document.createElement('link');
             link.rel = 'stylesheet';
+            link.href = "https://js-insert-staging.wlaboratory.com/styles/main.css";
             // link.href = "http://develop:10091/mdist/styles/main.css";
-            link.href = "https://rawgithub.com/mm0202/google-analytics-support/master/styles/main.css";
+            // link.href = "https://rawgithub.com/mm0202/google-analytics-support/master/styles/main.css";
             tags.appendChild(link);
             document.getElementsByTagName('head')[0].appendChild(tags);
 
