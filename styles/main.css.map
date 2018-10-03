@@ -1,0 +1,14 @@
+{
+  "version": 3,
+  "sources": [
+    "main.scss",
+    "main.css"
+  ],
+  "names": [],
+  "mappings": "AAAA;EACE,gBAAe;EACf,wBAAuB,EAOxB;EATD;IAII,aAAY,EAIb;IARH;MAMM,YAAW,EACZ;;ACCL,oCAAoC",
+  "file": "main.css",
+  "sourcesContent": [
+    ".google-analytics-support {\n  padding: 0.3rem;\n  background-color: black;\n  #execute {\n    color: white;\n    &:hover {\n      color: gray;\n    }\n  }\n}\n",
+    ".google-analytics-support {\n  padding: 0.3rem;\n  background-color: black; }\n  .google-analytics-support #execute {\n    color: white; }\n    .google-analytics-support #execute:hover {\n      color: gray; }\n\n/*# sourceMappingURL=main.css.map */\n"
+  ]
+}
